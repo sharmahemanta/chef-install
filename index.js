@@ -24,8 +24,8 @@ async function main() {
         versionParam = ''
       }
       await exec.exec(`curl -L https://${omnitruckUrl}/install.sh -o chefDownload.sh`)
-      await exec.exec(`sudo chmod +x chefDownload.sh`)
-      await exec.exec(`sudo ./chefDownload.sh ${channelParam} ${projectParam} ${versionParam}`)
+      await exec.exec(`hmod +x chefDownload.sh`)
+      await exec.exec(`./chefDownload.sh ${channelParam} ${projectParam} ${versionParam}`)
       await exec.exec(`rm -f chefDownload.sh`)
     }
     // We are on windows so assume powershell
